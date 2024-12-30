@@ -25,7 +25,7 @@
 
 /datum/action/cooldown/spell/pointed/blood_siphon/cast(mob/living/cast_on)
 	. = ..()
-	playsound(owner, 'sound/magic/demon_attack1.ogg', 75, TRUE)
+	playsound(owner, 'sound/effects/magic/demon_attack1.ogg', 75, TRUE)
 	if(cast_on.can_block_magic())
 		owner.balloon_alert(owner, "spell blocked!")
 		cast_on.visible_message(
@@ -40,8 +40,8 @@
 	)
 
 	var/mob/living/living_owner = owner
-	cast_on.adjustBruteLoss(20)
-	living_owner.adjustBruteLoss(-20)
+	cast_on.adjustBruteLoss(25) // FLUFFY FRONTIER EDIT: ANTAG BUFF #5159; original: 20
+	living_owner.adjustBruteLoss(-25) // FLUFFY FRONTIER EDIT: ANTAG BUFF #5159; original: 20
 
 	if(!cast_on.blood_volume || !living_owner.blood_volume)
 		return TRUE

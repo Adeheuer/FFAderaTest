@@ -30,6 +30,12 @@
 		feature_key = OFFSET_FACEMASK,
 		offset_y = list("north" = 7, "south" = 7, "east" = 7, "west" = 7),
 	)
+	worn_glasses_offset = new(
+		attached_part = src,
+		feature_key = OFFSET_GLASSES,
+		offset_y = list("north" = 10, "south" = 10, "east" = 10, "west" = 10),
+		offset_x = list("north" = 1, "south" = 1, "east" = 1, "west" = -1)
+	)
 	return ..()
 
 
@@ -78,6 +84,7 @@
 	limb_id = SPECIES_NABBER
 	brute_modifier = NABBER_BRUTE_MODIFIER
 	burn_modifier = NABBER_BURN_MODIFIER
+	footprint_sprite = FOOTPRINT_SPRITE_TAIL
 
 /obj/item/bodypart/leg/right/mutant/nabber
 	icon_greyscale = BODYPART_ICON_NABBER
@@ -85,6 +92,7 @@
 	limb_id = SPECIES_NABBER
 	brute_modifier = NABBER_BRUTE_MODIFIER
 	burn_modifier = NABBER_BURN_MODIFIER
+	footprint_sprite = FOOTPRINT_SPRITE_TAIL
 
 #undef NABBER_PUNCH_LOW
 #undef NABBER_PUNCH_HIGH

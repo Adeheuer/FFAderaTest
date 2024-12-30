@@ -173,9 +173,204 @@
 	worn_icon_teshari = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
-/obj/item/clothing/neck/cloak/trenchcloak
-	name = "senior commander's trenchcloak"
-	desc = "Dark trenchcloak made to order for senior officers. Consists of really strong leather and armored fabric. The inside of the collar has a label with ''V'' written on it."
+/obj/item/clothing/neck/cloak/tendercloak
+	name = "bayou old mantle"
+	desc = "This is a very shabby (and time-worn) cape, it smells funny of silt."
 	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
-	icon_state = "romontesque_cloak"
+	icon_state = "ten_neck"
 	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+
+/obj/item/clothing/neck/cloak/eldercoat
+	name = "hunter's cloak"
+	desc = "Just part of hunter's coat."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	icon_state = "eldercoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/under/eldercoat
+	name = "hunter's uniform"
+	desc = "Old-fashioned robes with a patterned pattern all over the clothes and a cape hanging from the left shoulder."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/under.dmi'
+	icon_state = "eldercoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/under.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/shoes/eldercoat
+	name = "leather boots"
+	desc = "Old-fashioned leather boots in a dark shade"
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/shoes.dmi'
+	icon_state = "eldercoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/shoes.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/gloves/eldercoat
+	name = "leather gloves"
+	desc = "Elongated leather gloves of an old-fashioned kind."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/gloves.dmi'
+	icon_state = "eldercoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/gloves.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/eldercoat
+	name = "three-cornered hat"
+	desc = "A pointed leather hat in a dark shade with a protruding feather."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/head.dmi'
+	icon_state = "eldercoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/head.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/neck/cloak/haori
+	name = "Flaming Haori"
+	desc = "A white haori with a flaming pattern on the end. It seems to radiate heat and energy. It seems."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	icon_state = "romontesque_haori"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/glasses/hud/security/sunglasses/ballistic
+	name = "ballistic security glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_redsec"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Default" = list(
+			RESKIN_ICON_STATE = "delingar_glasses_redsec",
+			RESKIN_WORN_ICON_STATE = "delingar_glasses_redsec"
+		),
+		"Blue" = list(
+			RESKIN_ICON_STATE = "delingar_glasses_bluesec",
+			RESKIN_WORN_ICON_STATE = "delingar_glasses_bluesec"
+		),
+		"Black" = list(
+			RESKIN_ICON_STATE = "delingar_glasses_blacksec",
+			RESKIN_WORN_ICON_STATE = "delingar_glasses_blacksec"
+		),
+	)
+
+/obj/item/clothing/glasses/meson/ballistic
+	name = "ballistic meson glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_meson"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Default" = list(
+			RESKIN_ICON_STATE = "delingar_glasses_meson",
+			RESKIN_WORN_ICON_STATE = "delingar_glasses_meson"
+		),
+		"Orange" = list(
+			RESKIN_ICON_STATE = "delingar_glasses_yellow",
+			RESKIN_WORN_ICON_STATE = "delingar_glasses_yellow"
+		),
+	)
+
+// Sprites of ballistic glasses by ebin_halcyon
+
+/obj/item/clothing/glasses/hud/health/ballistic
+	name = "ballistic health-check glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_medical"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+
+/obj/item/clothing/glasses/hud/diagnostic/ballistic
+	name = "ballistic diagnostic glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_diagnostic"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+
+/obj/item/clothing/glasses/ballistic
+	name = "ballistic glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_yellow"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+
+/obj/item/clothing/glasses/science/ballistic
+	name = "ballistic science glasses"
+	desc = "Made from the same cheap plastic as regular glasses. Don't expect them to help you. They have some strange orange shield logo on side."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/glasses.dmi'
+	icon_state = "delingar_glasses_science"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/glasses.dmi'
+
+/obj/item/clothing/suit/jacket/leather/futuristic //Fluffs for PhenyaMomota, contributor and maintainer
+	name = "futuristic jacket"
+	desc = "This jacket is equipped with electronic components, lighting, heating and other additional mechanisms from the hi-tech world. Inside you can find a tag that says it is Charles Ray property."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/suit.dmi'
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/suit.dmi'
+	icon_state = "fjacket"
+	worn_icon_state = "fjacket"
+	greyscale_config = /datum/greyscale_config/fjacket
+	greyscale_config_worn = /datum/greyscale_config/fjacket/worn
+	greyscale_colors = "#ffd900#00b7ff"
+	flags_1 = IS_PLAYER_COLORABLE_1
+
+/obj/item/clothing/suit/jacket/leather/futuristic/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+	. = ..()
+	if(!isinhands)
+		. += emissive_appearance('tff_modular/master_files/icons/donator/mob/clothing/suit.dmi', "fjacket-emissive", src, alpha = src.alpha)
+
+/obj/item/clothing/neck/voidarr_cape
+	name = "Voidarr personel cape"
+	desc = "Garment fit for Voidarr workforce, darker than the void of stars, as though woven from the very shadow that falleth betwixt dusk and dawn. The cape doth glisten faintly, upon its length, there lieth a subtle sprinkling of moondust."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	icon_state = "smol42_voidarr_cape"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+	resistance_flags = FIRE_PROOF
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Snow" = list(
+			RESKIN_ICON_STATE = "smol42_voidarr_cape_snow",
+			RESKIN_WORN_ICON_STATE = "smol42_voidarr_cape_snow"
+		)
+	)
+
+/obj/item/clothing/neck/smoltrenchcoat
+	name = "Secure Trenchcoat"
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	icon_state = "smol42_trenchcoat"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Snow" = list(
+			RESKIN_ICON_STATE = "smol42_trenchcoat_white",
+			RESKIN_WORN_ICON_STATE = "smol42_trenchcoat_white"
+		),
+		"Tin" = list(
+			RESKIN_ICON_STATE = "smol42_trenchcoat_tin",
+			RESKIN_WORN_ICON_STATE = "smol42_trenchcoat_tin"
+		),
+		"Blue" = list(
+			RESKIN_ICON_STATE = "smol42_trenchcoat_blue",
+			RESKIN_WORN_ICON_STATE = "smol42_trenchcoat_blue"
+		)
+	)
+
+/obj/item/clothing/neck/mousecloak
+	name = "Winter assault cloak"
+	desc = "Life is all about doing whatever you want. Waterproof with handmade details, it includes special sleeves, detachable parts and zipper pockets."
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/cloaks.dmi'
+	icon_state = "siamant_sectac_w"
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/neck.dmi'
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/neck/mousecloak/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/toggle_clothes, "siamant_sectac_w_t")
+
+// Uniform sprite copied from SS1984 Paradise Station
+
+/obj/item/clothing/under/rank/nanotrasen_consultant/trurl
+	icon = 'tff_modular/master_files/icons/donator/obj/clothing/under.dmi'
+	worn_icon = 'tff_modular/master_files/icons/donator/mob/clothing/under.dmi'
+	worn_icon_digi = 'tff_modular/master_files/icons/donator/mob/clothing/under_digi.dmi'
+	desc = "Gold trim on space-black cloth, this uniform bears an inscription that reads \"N.A.V. Trurl \" on the left shoulder. Worn exclusively by officers of the Nanotrasen Navy."
+	name = "NAV Trurl officer uniform"
+	icon_state = "ued_trurl_uniform"

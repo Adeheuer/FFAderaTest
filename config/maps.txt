@@ -47,6 +47,16 @@ map tramstation
 	votable
 endmap
 
+map nebulastation
+	minplayers 35
+	votable
+endmap
+
+map wawastation
+	votable
+	minplayers 40
+endmap
+
 # Debug-only maps.
 
 map gateway_test
@@ -75,6 +85,10 @@ map ouroboros
 	votable
 endmap
 
+map serenitystation
+	votable
+endmap
+
 ##FF MAPS##
 map kilostation2
 	maxplayers 50
@@ -85,4 +99,3 @@ map nssjourney
 	maxplayers 100
 	votable
 endmap
-

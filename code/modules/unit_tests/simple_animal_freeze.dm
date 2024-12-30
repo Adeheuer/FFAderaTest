@@ -6,7 +6,6 @@
 	// If you are refactoring a simple_animal, REMOVE it from this list
 	var/list/allowed_types = list(
 		/mob/living/simple_animal/bot,
-		/mob/living/simple_animal/bot/firebot,
 		/mob/living/simple_animal/bot/floorbot,
 		/mob/living/simple_animal/bot/mulebot,
 		/mob/living/simple_animal/bot/mulebot/paranormal,
@@ -21,7 +20,6 @@
 		/mob/living/simple_animal/bot/secbot/grievous,
 		/mob/living/simple_animal/bot/secbot/grievous/toy,
 		/mob/living/simple_animal/bot/secbot/pingsky,
-		/mob/living/simple_animal/bot/vibebot,
 		/mob/living/simple_animal/hostile,
 		/mob/living/simple_animal/hostile/asteroid,
 		/mob/living/simple_animal/hostile/asteroid/curseblob,
@@ -59,12 +57,15 @@
 		/mob/living/simple_animal/hostile/megafauna/legion/medium/right,
 		/mob/living/simple_animal/hostile/megafauna/legion/small,
 		/mob/living/simple_animal/hostile/megafauna/wendigo,
+		/mob/living/simple_animal/hostile/megafauna/wendigo/noportal,
 		/mob/living/simple_animal/hostile/mimic,
 		/mob/living/simple_animal/hostile/mimic/copy,
 		/mob/living/simple_animal/hostile/mimic/copy/machine,
 		/mob/living/simple_animal/hostile/mimic/copy/ranged,
 		/mob/living/simple_animal/hostile/mimic/crate,
 		/mob/living/simple_animal/hostile/mimic/xenobio,
+		/mob/living/simple_animal/hostile/mimic/watermelon,
+		/mob/living/simple_animal/hostile/mimic/crate/minor_illusion,
 		/mob/living/simple_animal/hostile/ooze,
 		/mob/living/simple_animal/hostile/ooze/gelatinous,
 		/mob/living/simple_animal/hostile/ooze/grapes,
@@ -73,10 +74,6 @@
 		/mob/living/simple_animal/hostile/retaliate/goose/vomit,
 		/mob/living/simple_animal/hostile/vatbeast,
 		/mob/living/simple_animal/hostile/zombie,
-		/mob/living/simple_animal/pet,
-		/mob/living/simple_animal/pet/gondola,
-		/mob/living/simple_animal/pet/gondola/gondolapod,
-		/mob/living/simple_animal/pet/gondola/virtual_domain,
 		/mob/living/simple_animal/soulscythe,
 
 		// MODULAR NOVA ENTRIES
@@ -128,8 +125,6 @@
 		/mob/living/simple_animal/hostile/vox/ranged/space/laser,
 		/mob/living/simple_animal/hostile/zombie/cheesezombie,
 		/mob/living/simple_animal/hostile/zombie/nocorpse,
-		/mob/living/simple_animal/pet/gondola/funky,
-		/mob/living/simple_animal/pet/poppy,
 		/mob/living/simple_animal/hostile/fleshmind/slicer,
 		/mob/living/simple_animal/hostile/fleshmind/floater,
 		/mob/living/simple_animal/hostile/fleshmind/globber,
@@ -141,6 +136,7 @@
 		/mob/living/simple_animal/hostile/fleshmind/mechiver,
 		/mob/living/simple_animal/hostile/fleshmind/mauler_monkey,
 		/mob/living/simple_animal/hostile/fleshmind,
+		/mob/living/simple_animal/hostile/ooze/grapes/xenobio, // update when grapes are updated, must be here to stop errors
 
 		// DO NOT ADD NEW ENTRIES TO THIS LIST
 		// READ THE COMMENT ABOVE

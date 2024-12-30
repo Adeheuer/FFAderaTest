@@ -38,6 +38,7 @@ export const MESSAGE_TYPE_ADMINLOG = 'adminlog';
 export const MESSAGE_TYPE_ATTACKLOG = 'attacklog';
 export const MESSAGE_TYPE_DEBUG = 'debug';
 export const MESSAGE_TYPE_MENTOR = 'mentor'; // NOVA EDIT ADDITION
+export const MESSAGE_TYPE_EVENTMAKER = 'eventmaker'; // TFF EDIT - Eventmaker
 
 // Metadata for each message type
 export const MESSAGE_TYPES = [
@@ -61,7 +62,7 @@ export const MESSAGE_TYPES = [
     name: 'Radio',
     description: 'All departments of radio messages',
     selector:
-      '.alert, .minorannounce, .syndradio, .centcomradio, .aiprivradio, .comradio, .secradio, .gangradio, .engradio, .medradio, .sciradio, .suppradio, .servradio, .radio, .deptradio, .binarysay, .newscaster, .resonate, .abductor, .alien, .changeling',
+      '.alert, .minorannounce, .syndradio, .centcomradio, .aiprivradio, .enteradio, .comradio, .secradio, .gangradio, .engradio, .medradio, .sciradio, .suppradio, .servradio, .radio, .deptradio, .binarysay, .newscaster, .resonate, .abductor, .alien, .changeling',
   },
   {
     type: MESSAGE_TYPE_INFO,
@@ -152,4 +153,12 @@ export const MESSAGE_TYPES = [
     description: 'Mentor PMs and other mentor things.',
     selector: '.mentor, .mentornotice',
   },
+  // TFF ADDITION START - Eventmaker
+  {
+    type: MESSAGE_TYPE_EVENTMAKER,
+    name: 'Eventmaker Log',
+    description: 'Eventmaker PMs and other eventmaker things.',
+    selector: '.eventmaker',
+  },
+  // TFF ADDITION END
 ];

@@ -282,6 +282,13 @@
 			return
 		var/target_key = href_list["addwatch"]
 		create_message("watchlist entry", target_key, secret = 1)
+	// TFF ADDITION START - Eventmaker
+	else if(href_list["addeventnote"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/target_key = href_list["addeventnote"]
+		create_message("eventmaker note", target_key, secret = 1)
+	// TFF ADDITION END
 
 	else if(href_list["addmemo"])
 		if(!check_rights(R_ADMIN))
@@ -1457,7 +1464,7 @@
 			if(response.body == "[]")
 				dat += "<center><b>0 bans detected for [ckey]</b></center>"
 			else
-				bans = json_decode(response["body"])
+				bans = json_decode(response.body)
 
 				//Ignore bans from non-whitelisted sources, if a whitelist exists
 				var/list/valid_sources
@@ -1775,6 +1782,16 @@
 			message_admins("An OPFOR candidate could not be selected.")
 
 	// NOVA EDIT ADDITION END
+	else if (href_list["print_fax"])
+		if(!check_rights(R_ADMIN))
+			return
+
+		for(var/obj/machinery/fax/admin/FAX as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/fax/admin))
+			if(FAX.fax_id != href_list["destination"])
+				continue
+			FAX.receive(locate(href_list["print_fax"]), href_list["sender_name"])
+
+
 	else if(href_list["play_internet"])
 		if(!check_rights(R_SOUND))
 			return

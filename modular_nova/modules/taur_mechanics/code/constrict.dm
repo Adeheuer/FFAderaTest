@@ -18,7 +18,7 @@
 	/// The tail we use to constrict mobs with. Nullable, if inactive.
 	var/obj/structure/serpentine_tail/tail
 	/// The base time it takes for us to constrict a mob.
-	var/base_coil_delay = 3.25 SECONDS
+	var/base_coil_delay = 2.2 SECONDS
 
 /datum/action/innate/constrict/Destroy()
 	qdel(tail) // we already listen for COMSIG_QDELETING on our tail, so it already sets it to null via the signal
@@ -202,7 +202,7 @@
 	var/mob/living/carbon/human/old_owner = owner
 	set_owner(null)
 
-	old_owner?.update_mutant_bodyparts()
+	old_owner?.update_body_parts()
 
 	tail_overlay = null
 	return ..()
@@ -215,7 +215,7 @@
 	//coloring
 	var/list/finished_list = list()
 	var/list/color_list = owner.dna.species.mutant_bodyparts["taur"][MUTANT_INDEX_COLOR_LIST] //identify color
-	var/datum/sprite_accessory/sprite_type = GLOB.sprite_accessories["taur"][owner.dna.species.mutant_bodyparts["taur"][MUTANT_INDEX_NAME]] //identify type
+	var/datum/sprite_accessory/sprite_type = SSaccessories.sprite_accessories["taur"][owner.dna.species.mutant_bodyparts["taur"][MUTANT_INDEX_NAME]] //identify type
 
 	switch(sprite_type.color_src)
 		if(USE_MATRIXED_COLORS)
@@ -508,13 +508,13 @@
 		UnregisterSignal(owner, list(COMSIG_MOVABLE_MOVED, COMSIG_LIVING_GRAB, COMSIG_LIVING_TRY_PULL, COMSIG_LIVING_SET_BODY_POSITION, COMSIG_ATOM_POST_DIR_CHANGE))
 
 	if (owner)
-		var/obj/item/organ/external/taur_body/taur_body = locate(/obj/item/organ/external/taur_body) in owner.organs
+		var/obj/item/organ/taur_body/taur_body = owner.get_organ_slot(ORGAN_SLOT_EXTERNAL_TAUR)
 		taur_body.hide_self = FALSE
 
 	owner = new_owner
 
 	if (owner)
-		var/obj/item/organ/external/taur_body/taur_body = locate(/obj/item/organ/external/taur_body) in owner.organs
+		var/obj/item/organ/taur_body/taur_body = owner.get_organ_slot(ORGAN_SLOT_EXTERNAL_TAUR)
 		taur_body.hide_self = TRUE
 
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(owner_moved))
@@ -522,7 +522,7 @@
 	RegisterSignal(owner, COMSIG_LIVING_TRY_PULL, PROC_REF(owner_tried_pull))
 	RegisterSignal(owner, COMSIG_LIVING_SET_BODY_POSITION, PROC_REF(owner_body_position_changed))
 	RegisterSignal(owner, COMSIG_ATOM_POST_DIR_CHANGE, PROC_REF(sync_direction))
-	owner?.update_mutant_bodyparts()
+	owner?.update_body_parts()
 
 /// The time it takes for a constricted thing to do a break-out attempt.
 #define SERPENTINE_TAIL_UNBUCKLE_TIME 0.5 SECONDS // arbitrary
@@ -567,14 +567,14 @@
 	switch(damage_type)
 		if(BRUTE)
 			if(damage_amount)
-				playsound(loc, 'sound/weapons/bladeslice.ogg', 100, TRUE)
+				playsound(loc, 'sound/items/weapons/bladeslice.ogg', 100, TRUE)
 			else
-				playsound(src, 'sound/weapons/tap.ogg', 50, TRUE)
+				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
 			if(!damage_amount)
 				return
 
-			playsound(loc, 'sound/items/welder.ogg', 100, TRUE)
+			playsound(loc, 'sound/items/tools/welder.ogg', 100, TRUE)
 
 
 /// Signal proc for when owner moves. Qdels src.

@@ -25,6 +25,9 @@
 				/obj/item/clothing/under/rank/security/nova/utility/redsec = 5,
 				/obj/item/clothing/suit/toggle/jacket/sec/old = 5,
 				/obj/item/clothing/suit/armor/vest/alt/sec/redsec = 2,
+				/obj/item/storage/backpack/waistbag/redsec = 3,
+				/obj/item/clothing/suit/armor/vest/alt/caftan = 3,
+				/obj/item/clothing/head/berendeyka = 3,
 			),
 		),
 		list(
@@ -32,6 +35,8 @@
 			"icon" = "user-tie",
 			"products" = list(
 				/obj/item/clothing/suit/hooded/wintercoat/security = 5,
+				/obj/item/clothing/suit/toggle/jacket/sec/blue = 5,
+				/obj/item/clothing/suit/toggle/jacket/sec/bluewinter = 5,
 				/obj/item/clothing/suit/toggle/jacket/sec = 5,
 				/obj/item/clothing/suit/armor/vest/peacekeeper/brit = 5,
 				/obj/item/clothing/neck/security_cape = 5,
@@ -42,6 +47,7 @@
 				/obj/item/storage/backpack/duffelbag/sec = 5,
 				/obj/item/clothing/under/rank/security/officer = 10,
 				/obj/item/clothing/under/rank/security/officer/skirt = 10,
+				/obj/item/clothing/under/rank/security/peacekeeper/plain_skirt = 10,
 				/obj/item/clothing/under/rank/security/peacekeeper = 10,
 				/obj/item/clothing/under/rank/security/nova/utility = 3,
 				/obj/item/clothing/shoes/jackboots/sec = 10,
@@ -52,6 +58,7 @@
 				/obj/item/clothing/head/hats/warden/police/patrol = 5,
 				/obj/item/clothing/head/costume/ushanka/sec = 10,
 				/obj/item/clothing/gloves/color/black/security = 10,
+				/obj/item/storage/backpack/waistbag/bluesec = 3,
 			),
 		),
 	)

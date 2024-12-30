@@ -301,13 +301,13 @@ const FunTab = (props) => {
             />
           </Stack.Item>
           <Stack.Item>
-            <NoticeBox
-              mb={0.0}
+            <Button
+              icon="plus"
+              lineHeight={lineHeightNormal}
               width={buttonWidthNormal}
-              height={lineHeightNormal}
-            >
-              Your admin button here, coder!
-            </NoticeBox>
+              content="Mass Heal everyone"
+              onClick={() => act('mass_heal')}
+            />
           </Stack.Item>
         </Stack>
       </Stack.Item>
@@ -354,13 +354,13 @@ const FunTab = (props) => {
             />
           </Stack.Item>
           <Stack.Item>
-            <NoticeBox
-              mb={0.0}
+            <Button
+              icon="robot"
+              lineHeight={lineHeightNormal}
               width={buttonWidthNormal}
-              height={lineHeightNormal}
-            >
-              Your admin button here, coder!
-            </NoticeBox>
+              content="Triple AI mode"
+              onClick={() => act('tripleAI')}
+            />
           </Stack.Item>
           <Stack.Item>
             <Button
@@ -632,7 +632,7 @@ const FunForYouTab = (props) => {
 
 export const Secrets = (props) => {
   const { act, data } = useBackend();
-  const { is_debugger, is_funmin } = data;
+  const { is_debugger, is_funmin, is_eventmaker } = data;
   const [tabIndex, setTabIndex] = useState(2);
   const TabComponent = TAB2NAME[tabIndex - 1].component();
 
@@ -644,20 +644,22 @@ export const Secrets = (props) => {
             <Section
               title="Secrets"
               buttons={
-                <>
-                  <Button
-                    color="blue"
-                    icon="address-card"
-                    content="Admin Log"
-                    onClick={() => act('admin_log')}
-                  />
-                  <Button
-                    color="blue"
-                    icon="eye"
-                    content="Show Admins"
-                    onClick={() => act('show_admins')}
-                  />
-                </>
+                !is_eventmaker && (
+                  <>
+                    <Button
+                      color="blue"
+                      icon="address-card"
+                      content="Admin Log"
+                      onClick={() => act('admin_log')}
+                    />
+                    <Button
+                      color="blue"
+                      icon="eye"
+                      content="Show Admins"
+                      onClick={() => act('show_admins')}
+                    />
+                  </>
+                )
               }
             >
               <Flex mx={-0.5} align="stretch" justify="center">

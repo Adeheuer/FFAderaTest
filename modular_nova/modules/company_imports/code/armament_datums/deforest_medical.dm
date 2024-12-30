@@ -7,7 +7,7 @@
 /datum/armament_entry/company_import/deforest/first_aid_kit
 	subcategory = "First-Aid Kits"
 
-/datum/armament_entry/deforest/first_aid_kit/civil_defense/comfort
+/datum/armament_entry/company_import/deforest/first_aid_kit/comfort
 	item_type = /obj/item/storage/medkit/civil_defense/comfort/stocked
 	cost = PAYCHECK_COMMAND * 2
 
@@ -33,11 +33,15 @@
 
 /datum/armament_entry/company_import/deforest/first_aid_kit/first_responder
 	item_type = /obj/item/storage/backpack/duffelbag/deforest_surgical/stocked
-	cost = PAYCHECK_COMMAND * 10
+	cost = PAYCHECK_COMMAND * 10.5
 
 /datum/armament_entry/company_import/deforest/first_aid_kit/orange_satchel
 	item_type = /obj/item/storage/backpack/duffelbag/deforest_medkit/stocked
-	cost = PAYCHECK_COMMAND * 10
+	cost = PAYCHECK_COMMAND * 9.5
+
+/datum/armament_entry/company_import/deforest/first_aid_kit/technician_satchel
+	item_type = /obj/item/storage/backpack/duffelbag/deforest_paramedic/stocked
+	cost = PAYCHECK_COMMAND * 11.75
 
 // Basic first aid supplies like gauze, sutures, mesh, so on
 
@@ -52,6 +56,10 @@
 	item_type = /obj/item/stack/medical/suture
 	cost = PAYCHECK_LOWER
 
+/datum/armament_entry/company_import/deforest/first_aid/medicated_sutures
+	item_type = /obj/item/stack/medical/suture/medicated
+	cost = PAYCHECK_LOWER * 1.6
+
 /datum/armament_entry/company_import/deforest/first_aid/red_sun
 	item_type = /obj/item/stack/medical/ointment/red_sun
 	cost = PAYCHECK_LOWER
@@ -63,6 +71,10 @@
 /datum/armament_entry/company_import/deforest/first_aid/mesh
 	item_type = /obj/item/stack/medical/mesh
 	cost = PAYCHECK_LOWER
+
+/datum/armament_entry/company_import/deforest/first_aid/advanced_mesh
+	item_type = /obj/item/stack/medical/mesh/advanced
+	cost = PAYCHECK_LOWER * 1.6
 
 /datum/armament_entry/company_import/deforest/first_aid/sterile_gauze
 	item_type = /obj/item/stack/medical/gauze/sterilized
@@ -95,6 +107,10 @@
 /datum/armament_entry/company_import/deforest/first_aid/super_robofoam
 	item_type = /obj/item/stack/medical/wound_recovery/robofoam_super
 	cost = PAYCHECK_COMMAND * 4
+
+/datum/armament_entry/company_import/deforest/first_aid/mannitol // Bitrunners and Degenerative players should not be out of a job if med is slow, gone or bad
+	item_type = /obj/item/storage/pill_bottle/mannitol
+	cost = PAYCHECK_COMMAND * 4 // pricey to not obsolete med if they ARE here
 
 // Autoinjectors for healing
 
@@ -237,20 +253,20 @@
 
 /datum/armament_entry/company_import/deforest/cyber_implants/razorwire
 	name = "Razorwire Spool Implant"
-	item_type = /obj/item/organ/internal/cyberimp/arm/razorwire
+	item_type = /obj/item/organ/cyberimp/arm/razorwire
 
 /datum/armament_entry/company_import/deforest/cyber_implants/shell_launcher
 	name = "Shell Launch System Implant"
-	item_type = /obj/item/organ/internal/cyberimp/arm/shell_launcher
+	item_type = /obj/item/organ/cyberimp/arm/shell_launcher
 
 /datum/armament_entry/company_import/deforest/cyber_implants/sandy
 	name = "Qani-Laaca Sensory Computer Implant"
-	item_type = /obj/item/organ/internal/cyberimp/sensory_enhancer
+	item_type = /obj/item/organ/cyberimp/sensory_enhancer
 	cost = PAYCHECK_COMMAND * 5
 
 /datum/armament_entry/company_import/deforest/cyber_implants/hackerman
 	name = "Binyat Wireless Hacking System Implant"
-	item_type = /obj/item/organ/internal/cyberimp/hackerman_deck
+	item_type = /obj/item/organ/cyberimp/hackerman_deck
 	cost = PAYCHECK_COMMAND * 10
 
 // Modsuit Modules from the medical category, here instead of in Nakamura because nobody buys from this company
@@ -263,9 +279,9 @@
 	name = "MOD injector module"
 	item_type = /obj/item/mod/module/injector
 
-/datum/armament_entry/company_import/deforest/medical_modules/organ_thrower
-	name = "MOD organ thrower module"
-	item_type = /obj/item/mod/module/organ_thrower
+/datum/armament_entry/company_import/deforest/medical_modules/organizer
+	name = "MOD organizer module"
+	item_type = /obj/item/mod/module/organizer
 
 /datum/armament_entry/company_import/deforest/medical_modules/patient_transport
 	name = "MOD patient transport module"
