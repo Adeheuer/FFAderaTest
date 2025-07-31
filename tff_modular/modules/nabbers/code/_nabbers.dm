@@ -268,7 +268,7 @@
 		/datum/quirk/softspoken,
 		/datum/quirk/tin_man,
 		/datum/quirk/touchy,
-		/datum/quirk/narcolepsy,
+		/datum/quirk/item_quirk/narcolepsy,
 		/datum/quirk/fragile,
 		/datum/quirk/alexithymia,
 		// Нейтральные
@@ -324,7 +324,7 @@
 		/datum/quirk/hard_soles, // Встроен
 		/datum/quirk/linguist,
 		/datum/quirk/sharpclaws,
-		/datum/quirk/water_breathing,
+		/datum/quirk/item_quirk/breather/water_breather,
 		/datum/quirk/no_appendix, // Нет аппендикса
 		/datum/quirk/shapeshifter,
 	)

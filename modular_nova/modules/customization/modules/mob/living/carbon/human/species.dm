@@ -70,14 +70,30 @@ GLOBAL_LIST_EMPTY(customizable_races)
 		"ears" = list("Cat", FALSE),
 	)
 
+/datum/species/human/felinid/create_pref_unique_perks()
+	var/list/to_add = ..()
+
+	to_add += list(
+		list(
+			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+			SPECIES_PERK_ICON = "paw",
+			SPECIES_PERK_NAME = "Soft Landing",
+			SPECIES_PERK_DESC = "Felinids are unhurt by high falls, and land on their feet.",
+		),
+	)
+	return to_add
+
 /datum/species/human
 	mutant_bodyparts = list()
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
+	mutant_bodyparts = list("legs" = "Normal Legs")
 
 /datum/species/human/get_default_mutant_bodyparts()
 	return list(
 		"ears" = list("None", FALSE),
 		"tail" = list("None", FALSE),
 		"wings" = list("None", FALSE),
+		"legs" = list("Normal Legs", FALSE),
 	)
 
 /datum/species/mush
