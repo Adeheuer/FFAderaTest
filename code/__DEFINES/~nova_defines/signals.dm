@@ -92,6 +92,9 @@
 /// Whenever we need to get the soul of the mob inside of the soulcatcher.
 #define COMSIG_SOULCATCHER_SCAN_BODY "soulcatcher_scan_body"
 
+/// When a soulcatcher room's joinability is updated by opening the room, closing the room, allowing ghosts, etc: from base of datum/component/soulcatcher/proc/update_joinability()
+#define COMSIG_SOULCATCHER_UPDATE_JOINABILITY "soulcatcher_update_joinability"
+
 // CORRUPTION SIGNALS
 
 /// From /obj/structure/fleshmind/structure/proc/activate_ability() (src)
@@ -119,3 +122,9 @@
 
 ///from base of /datum/preference_middleware/jobs/proc/set_job_title() and /datum/preference_middleware/jobs/proc/set_job_preference: ()
 #define COMSIG_JOB_PREF_UPDATED "job_pref_updated"
+
+/// When a gun's safety is toggled.
+#define COMSIG_GUN_SAFETY_TOGGLED "gun_safety_toggled"
+
+/// Signal sent whenever a gun with a barrel booster toggles its barrel booster.
+#define COMSIG_GUN_BOOSTER_TOGGLED "gun_booster_toggled"
